@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 if __name__  == "__main__":
-    import sys
-    usr = sys.argv[1:]
+    from sys import argv
+    usr = argv[1:]
     length = len(usr)
     i = 1
     if length == 0:
