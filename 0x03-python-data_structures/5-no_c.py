@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 def no_c(my_string):
     if my_string is not None:
-        my_string = list(my_string)
-        for ind in range(len(my_string)):
-            if ord('c') == ord(my_string[ind]) or ord('C') == ord(my_string[ind]): 
-                my_string[ind] = ''
-        my_string=''.join(my_string)
+        lists = list(my_string)
+        for ind in range(len(lists)):
+            if ord('c') == ord(lists[ind]) or ord('C') == ord(lists[ind]):
+                lists[ind] = ''
+        my_string = ''.join(lists)
         return my_string
