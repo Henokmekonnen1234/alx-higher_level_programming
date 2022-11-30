@@ -10,4 +10,4 @@ for (let i = 2; i < args.length; i++){
     a[i + 1] = temp;
 }
 }
-console.log(args[2...])
+console.log(args)
