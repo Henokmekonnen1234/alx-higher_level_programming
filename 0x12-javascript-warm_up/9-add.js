@@ -6,5 +6,5 @@ function add (a, b) {
 
 const process = require('process');
 const args = process.argv;
-const sum = add(args[2], args[3]);
+const sum = add(parseInt(args[2]), parseInt(args[3]));
 console.log(sum);
