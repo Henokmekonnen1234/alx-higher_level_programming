@@ -1,3 +1,5 @@
 #!/usr/bin/python3
 str = "Holberton School"
-print(str * 3)
+print(str, end="")
+print(str, end="")
+print(str)
