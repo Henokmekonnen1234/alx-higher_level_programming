@@ -2,7 +2,7 @@
  a=$1
 touch $a
 
-chmod a+rwx $a
+chmod rwx $a
 
 vi $a
 
