@@ -1,11 +1,12 @@
 #!usr/bin/python3
-""" Square class is a class which have size attribute
+""" Module 2-square
+
+    This Module contain Square class is a class which have size
 """
 
 
 class Square:
-    """ Square class is a class which have size attribute
-    """
+    """ Square class is a class which have size attribute"""
 
     def __init__(self, size=0):
         """ intialize the fields of the class
