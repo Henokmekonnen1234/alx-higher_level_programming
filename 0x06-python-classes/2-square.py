@@ -1,15 +1,15 @@
-#!usr/bin/python3
-""" Module 2-square
+#!/usr/bin/python3
+"""Module 2-square
 
-    This Module contain Square class is a class which have size
+This Module contains an definition for Square class
 """
 
 
 class Square:
-    """ Square class is a class which have size attribute"""
+    """A class that represents a square"""
 
     def __init__(self, size=0):
-         """initializes a square with size
+        """initializes a square with size
 
         Args:
             size (int, optional): the size of the square. Defaults to 0.
@@ -18,7 +18,7 @@ class Square:
             TypeError: if size is not an int
             ValueError: if size is less than 0
         """
-        if type(size) is not int:
+		if type(size) is not int:
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
