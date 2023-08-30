@@ -1,8 +1,4 @@
 #!usr/bin/python3
-""" Square class is a class which have size attribute
-    with private instance attribute """
-
-
 class Square:
     """ Square class is a class which have size attribute
         with private instance attribute
