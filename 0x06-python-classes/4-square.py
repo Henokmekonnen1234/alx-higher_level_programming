@@ -4,12 +4,13 @@
 This Module defies the Square class
 """
 
+
 class Square:
     """this class define about the square class"""
 
     def __init__(self, size=0):
         """intialaize the size instance
-        
+
         Args:
             size (int, optional): length of the sizes
         """
@@ -26,7 +27,7 @@ class Square:
 
     @size.setter
     def size(self, value):
-        """Setter method 
+        """Setter method
 
         Args:
             value (int, optional): int value to  set size
