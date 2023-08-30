@@ -9,13 +9,14 @@ class Square:
     """ Square class is a class which have size attribute"""
 
     def __init__(self, size=0):
-        """ intialize the fields of the class
+         """initializes a square with size
 
-             Args:
-                 size : int
-            Raises:
-                TypeError: size must be an integer
-                ValueError: size must be >= 0
+        Args:
+            size (int, optional): the size of the square. Defaults to 0.
+
+        Raises:
+            TypeError: if size is not an int
+            ValueError: if size is less than 0
         """
         if type(size) is not int:
             raise TypeError("size must be an integer")
