@@ -1,0 +1,17 @@
+
+ize(self):
+ 23         """ getter method of the size instace
+ 24
+ 25         Return:
+ 26             value of size
+ 27         """
+ 28         return self.__size
+ 29
+ 30     @size.setter
+ 31     def size(self, size=0):
+ 32         if type(size) is not int:
+ 33             raise TypeError("size must be an integer")
+ 34         elif size < 0:
+ 35             raise ValueError("size must be >= 0")
+ 36         else:
+ 37             self.__size = size
