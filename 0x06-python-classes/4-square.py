@@ -41,3 +41,11 @@ class Square:
         elif size < 0:
             raise ValueError("size must be >= 0")
         selfValueError("size must be >= 0")
+
+    def area(self):
+        """Calculate the are of square
+
+        Return:
+            int: the square of the sides
+        """
+        return self.__size ** 2
