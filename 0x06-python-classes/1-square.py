@@ -4,6 +4,8 @@
 
 
 class Square:
+     """ Square class is a class which have size attribute
+		 with private instance attribute """
 
     def __init__(self, size):
 
