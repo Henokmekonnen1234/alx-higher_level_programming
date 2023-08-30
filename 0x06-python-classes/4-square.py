@@ -14,7 +14,7 @@ class Square:
         Args:
             size (int, optional): length of the sizes
         """
-        self.__size == size
+        self.__size = size
 
     @property
     def size(self):
@@ -38,7 +38,7 @@ class Square:
         """
         if type(value) != int:
             raise TypeError("size must be an integer")
-        elif size < 0:
+        elif value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
 
