@@ -1,20 +1,17 @@
-#!usr/bin/python3
-""" Square class is a class which have size attribute
-        with private instance attribute
+#!/usr/bin/python3
+"""Module 1-square
+
+This Module contains an definition for Square class
 """
 
 
 class Square:
-    """ Square class is a class which have size attribute
-        with private instance attribute
-    """
+    """A class that represents a square"""
 
     def __init__(self, size):
+        """initializes a square with size
 
-        """ the __init__ method is special type of method
-            which it intialize the fields of the class
-
-            Args:
-                size : int
+        Args:
+            size: the size of the square
         """
         self.__size = size
