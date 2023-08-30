@@ -4,8 +4,14 @@
 
 
 class Square:
-     """ Square class is a class which have size attribute
-		 with private instance attribute """
+    """ Square class is a class which have size attribute
+        with private instance attribute
+
+        Attribute
+        ---------
+        size : int
+            value of length of sides
+        """
 
     def __init__(self, size):
 
