@@ -1,0 +1,13 @@
+s fuction addes two int or float numbers
+
+    Args:
+        a (int, float): the first number
+        b (int, float): the second number
+
+    Return:
+        int: return the sum of two number
+
+    Raise:
+        TypeError: a must be an integer
+        TypeError: b must be an integer
+    """

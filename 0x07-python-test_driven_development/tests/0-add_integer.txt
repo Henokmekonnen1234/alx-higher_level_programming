@@ -1,0 +1,61 @@
+============================
+How to Use 0-add_integer.py
+============================
+
+This library is very simple, since it has only one function called
+``add_integer``
+
+Numbers
+=======
+
+``add_integer()`` returns the sum of it's arguments. For numbers,
+that value is equivalent to using ``+`` operator.
+
+::
+
+	>>> add_integer = __import__('0-add_integer').add_integer
+	>>> add_integer(1, 2)
+	3
+
+::
+
+	>>> add_integer(1, 2.2)
+	3
+
+::
+
+        >>> add_integer(1)
+        99
+
+::
+
+	>>> add_integer(1.1, 2)
+	3
+
+::
+
+	>>> add_integer(1.1, 2.2)
+	3
+
+Non-Numbers
+===========
+
+::
+	>>> add_integer('a', 2)
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
+
+::
+
+	>>> add_integer(2, 'b')
+        Traceback (most recent call last):
+                ...
+	TypeError: b must be an integer
+
+::
+
+        >>> add_integer(None, 2)
+        Traceback (most recent call last):
+                ...
+        TypeError: a must be an integer
