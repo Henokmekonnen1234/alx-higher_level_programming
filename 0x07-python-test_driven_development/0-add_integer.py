@@ -8,8 +8,17 @@ This module supplies one function add_integer for  adding integer
 
 def add_integer(a, b=98):
     """ this fuction addes two int or float numbers
+    Args:
+        a (int, float): the first int or float number
+        b (int, float): the second int or float number
+
     Raise:
-        TypeError: a must be an integer or  b must be an integer"""
+        TypeError: if a is not an integer or float number
+        TypeError: if b is not an integer or float number
+
+    Return:
+        int: the sum of a and b will be returned
+    """
     if type(a) != int and type(a) != float:
         raise TypeError("a must be an integer")
     elif type(b) != int and type(b) != float:
