@@ -5,6 +5,7 @@ Module 0-add_integer.py
 This module supplies one function add_integer for  adding integer
 """
 
+
 def add_integer(a, b=98):
     """ this fuction addes two int or float numbers
     Raise:
@@ -14,4 +15,3 @@ def add_integer(a, b=98):
     elif type(b) != int and type(b) != float:
         raise TypeError("b must be an integer")
     return int(a) + int(b)
-
