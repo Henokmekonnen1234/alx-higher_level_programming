@@ -1,0 +1,52 @@
+==========================
+How to 2-matrix_divided.py
+==========================
+
+This module divide matrix by a given number.
+
+Documentation test
+===================
+
+	>>> md = __import__('2-matrix_divided').__doc__
+	>>> len(md) > 1
+	True
+
+	>>> mdv  = __import__('2-matrix_divided').matrix_divided.__doc__
+	>>> len(mdv) > 1
+	True
+
+Numbers
+=======
+
+	>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+	>>> matrix_divided([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 3)
+	[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0], [2.33, 2.67, 3.0]]
+
+	>>> matrix_divided([[1.4567, 2.4567, 3.4567], [4.4567, 5.4567, 6.4567], [7.4567, 8.4567, 9.4567]], 1)
+	[[1.46, 2.46, 3.46], [4.46, 5.46, 6.46], [7.46, 8.46, 9.46]]
+
+	>>> matrix_divided([[1.4567, 2.4567, 3.4567], [4.4567, 5.4567, 6.4567], [7.4567, 8.4567, 9.4567]], 1.0)
+	[[1.46, 2.46, 3.46], [4.46, 5.46, 6.46], [7.46, 8.46, 9.46]]
+
+Non-Numbers
+===========
+
+	>>> matrix_divided([[1.4567, 2.4567, 3.4567], [4.4567, 'x', 6.4567], [7.4567, 8.4567, 9.4567]], 1.0)
+	Traceback (most recent call last):
+		...
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+	>>> matrix_divided([[1.4567, 2.4567, 3.4567], [4.4567, 5.4567, 6.4567, 4.534], [7.4567, 8.4567, 9.4567]], 1.0)
+	Traceback (most recent call last):
+		...
+	TypeError: Each row of the matrix must have the same size
+
+	>>> matrix_divided([[1.4567, 2.4567, 3.4567], [4.4567, 1, 6.4567], [7.4567, 8.4567, 9.4567]], 'x')
+        Traceback (most recent call last):
+                ...
+        TypeError: div must be a number
+
+	>>> matrix_divided([[1.4567, 2.4567, 3.4567], [4.4567, 1, 6.4567], [7.4567, 8.4567, 9.4567]], 0)
+	Traceback (most recent call last):
+                ...
+        ZeroDivisionError: division by zero
