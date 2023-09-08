@@ -32,10 +32,10 @@ def matrix_divided(matrix, div):
             if type(j) != int and type(j) != float:
                 print("checked")
                 raise TypeError('matrix must be a matrix (list of lists)'
-                              ' of integers/floats')
+                                ' of integers/floats')
     if type(div) not in (int, float):
         raise TypeError("div must be a number")
     elif div == 0:
         raise ZeroDivisionError("division by zero")
-    lists = list(map(lambda x: list(map(lambda y: round(y / div, 2), x)), matrix))
-    return lists
+    i = list(map(lambda x: list(map(lambda y: round(y / div, 2), x)), matrix))
+    return i
