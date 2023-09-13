@@ -1,0 +1,46 @@
+========================
+How To Use 1-my_list.py
+========================
+
+This file describes how to use class MyList.
+
+::
+
+Documentation
+==============
+
+	>>> MyList = __import__('1-my_list').__doc__
+	>>> len(MyList) > 1
+	True
+
+::
+
+	>>> doctest = __import__('1-my_list').MyList.__doc__
+	>>> len(doctest) > 1
+	True
+
+Numbers
+========
+
+	>>> MyList = __import__('1-my_list').MyList
+	>>> my_list = MyList()
+	>>> my_list.append(4)
+	>>> my_list.append(2)
+	>>> my_list.append(3)
+	>>> my_list.append(5)
+	>>> print(my_list)
+	[4, 2, 3, 5]
+
+testing the sorting method
+
+	>>> my_list = MyList()
+        >>> my_list.append(4)
+        >>> my_list.append(2)
+        >>> my_list.append(3)
+        >>> my_list.append(5)
+	>>> my_list.append(5)
+        >>> my_list.append(-2)
+        >>> my_list.append(-3)
+        >>> my_list.append(-5)
+        >>> my_list.print_sorted()
+	[-5, -3, -2, 2, 3, 4, 5, 5]
