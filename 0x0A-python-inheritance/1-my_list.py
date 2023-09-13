@@ -10,19 +10,19 @@ class MyList(list):
     """ This class inherit list from list class """
 
     def __init__(self):
-        """initialation method 
+        """initialation method
 
         Args:
             value (int): empty list
             count (int): numbers of elements in list
         """
         self.value = []
-        
+
     def append(self, number):
         """ this method add numbers to the list
 
         Args:
-            number (int): numbers passed to class 
+            number (int): numbers passed to class
                           tobe added to the list
         """
         self.value.append(number)
