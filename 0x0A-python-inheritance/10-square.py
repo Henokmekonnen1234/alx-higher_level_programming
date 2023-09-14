@@ -28,7 +28,8 @@ class Square(Rectangle):
             int: area of squares
         """
         return self.__size ** 2
-    
+
     def __str__(self):
         """string representation of the class"""
-        return f"[{self.__class__.__mro__[1].__name__}] {self.__size}/{self.__size}"
+        return f"[{self.__class__.__mro__[1].__name__}]"\
+            "{self.__size}/{self.__size}"
