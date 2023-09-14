@@ -25,7 +25,7 @@ class BaseGeometry:
         """This method validates value variable
 
         Args:
-            value (int): integer value
+            value (any): integer value
             name (str): string value
 
         Raises:
