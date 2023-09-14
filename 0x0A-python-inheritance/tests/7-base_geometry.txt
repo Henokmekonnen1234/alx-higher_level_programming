@@ -1,0 +1,51 @@
+==========================
+How To Use 7-base_geometry.py
+=============================
+Let we start testing with the documentaion
+
+Documentation
+=============
+
+	>>> base_g = __import__('7-base_geometry').__doc__
+	>>> len(base_g) > 1
+	True
+
+	>>> base_g = __import__('7-base_geometry').BaseGeometry.__doc__
+        >>> len(base_g) > 1
+        True
+
+Now let test it with the numbers
+Numbers
+=======
+
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("pos_number", 1)
+	
+	>>> bg.integer_validator("pos_number", 1.2)
+        Traceback (most recent call last):
+                ...
+	TypeError: pos_number must be an integer
+
+	>>> bg.integer_validator("age", -5)
+	Traceback (most recent call last):
+		...
+	ValueError: age must be greater than 0
+
+	>>> bg.integer_validator("age", -5)
+        Traceback (most recent call last):
+                ...
+        ValueError: age must be greater than 0
+
+Non-Numbers
+===========
+
+	>>> bg.integer_validator("pos_number", "num")
+        Traceback (most recent call last):
+                ...
+        TypeError: pos_number must be an integer
+
+	>>> bg.integer_validator("pos_number", [1, 2])
+        Traceback (most recent call last):
+                ...
+        TypeError: pos_number must be an integer
