@@ -5,6 +5,8 @@ Module base.py
 This module will be described below
 """
 
+import json
+
 
 class Base:
     """ Base class will be described
@@ -16,7 +18,7 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """this method initializes the values 
+        """this method initializes the values
 
         Args:
             id (int): we assign it to the values
@@ -26,3 +28,17 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = self.__nb_objects
+
+    def to_json_string(list_dictionaries):
+        """this method will serilizes the list
+
+        Args:
+            list_dictionaries (list): list of instaces
+
+        Returns:
+            str: it will serilizes and return str representation of list
+        """
+        if list_dictionaries is None:
+            return "[]"
+        else:
+            return json.dumps(list_dictionaries)
