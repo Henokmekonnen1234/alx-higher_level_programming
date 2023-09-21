@@ -7,6 +7,8 @@ This module will be described below
 
 import json
 import turtle
+import csv
+import os
 
 
 class Base:
@@ -105,6 +107,51 @@ class Base:
             return list_of_instance
         except Exception:
             return list_of_instance
+   
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """this method will save the datas in csv file
+
+        Args:
+            list_objs (list): contain list of datas
+        """
+        to_dict = []
+        if list_objs is None:
+            to_dict = []
+        elif hasattr(list_objs[0],"to_dictionary"):
+            to_dict = [obj.to_dictionary() for obj in list_objs]
+        else:
+            to_dict = list_objs
+        with open(f"{cls.__name__}.csv", "a+", newline="") as cfile:
+            if to_dict is not None:
+                writer = csv.DictWriter(cfile, to_dict[0].keys())
+                if os.path.getsize(f"{cls.__name__}.csv") == 0:
+                    writer.writeheader()
+                for value in to_dict:
+                    writer.writerow(value)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """this method will assign values for the classes from
+            the csv file
+
+        Returns:
+            list: contain lists of classes
+        """
+        try:
+            ins_list = []
+            with open(f"{cls.__name__}.csv", newline="") as cfile:
+                reader = csv.DictReader(cfile)
+                for row in reader:
+                    new_value = {k:int(v) for k, v in row.items()}
+                    ins_list.append(cls.create(**new_value))
+        except FileNotFoundError as e:
+            print(e)
+            ins_list = []
+        except Exception as e:
+            print(e)
+            ins_list =  []
+        return ins_list
 
     @staticmethod
     def draw(list_rectangles, list_squares):
