@@ -1,8 +1,6 @@
 -- this will create id__not_null table 
 CREATE TABLE IF NOT EXiSTS id_not_null
 (
-	id INT UNIQUE NOT NULL AUTO_INCREAMENT PRIMARY KEY,
+	id INT UNIQUE NOT NULL DEFAULT 1 PRIMARY KEY,
 	name VARCHAR(256)
 );
-INSERT INTO id_not_null(name)
-VALUES ('Best');
