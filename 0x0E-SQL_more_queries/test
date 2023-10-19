@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+cat "$1" | sudo mysql -hlocalhost -uroot -p$2 $3 
+
