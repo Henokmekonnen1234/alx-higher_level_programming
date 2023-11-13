@@ -1,8 +1,9 @@
 #!/usr/bin/node
 
 const { argv } = require('node:process');
-const args = argv.slice(2);
-if (args.length > 0) {
+let length = 0;
+argv.forEach((value, index) => length += 1);
+if (length > 2) {
   console.log('Argument found');
 } else {
   console.log('No argument');
