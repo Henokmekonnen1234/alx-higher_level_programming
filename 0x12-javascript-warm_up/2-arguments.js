@@ -8,4 +8,3 @@ if (length <= 2) {
 } else {
   console.log('Argument found');
 }
-
