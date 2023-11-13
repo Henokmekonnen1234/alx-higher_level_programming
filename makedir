@@ -1,5 +1,5 @@
 #!/bin/bash
 
 mkdir $1
-touch $1/README.md
+touch $1/README.md << $2
 cd $1

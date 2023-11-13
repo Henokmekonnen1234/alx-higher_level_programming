@@ -1,0 +1,42 @@
+===========================
+How to Use 3-say_my_name.py
+===========================
+
+This doctest is for function `say_my_name()`. It accept two argumets 
+first_name and last_name then prints the arguments.
+
+Docmentation
+============
+
+	>>> Doctest = __import__('3-say_my_name').__doc__
+	>>> len(Doctest) > 1
+	True
+
+	>>> Doctests = __import__('3-say_my_name').say_my_name.__doc__
+	>>> len(Doctest) > 1
+	True
+
+Numbers
+========
+
+	>>> smn = __import__('3-say_my_name').say_my_name
+	>>> smn(1, "Mekonnen")
+	Traceback (most recent call last):
+		...
+	TypeError: first_name must be a string
+
+	>>> smn("Henok", 9)
+        Traceback (most recent call last):
+                ...
+        TypeError: last_name must be a string
+
+Non-Numbers
+===========
+
+	>>> smn()
+	Traceback (most recent call last):
+                ...
+        TypeError: first_name must be a string
+
+	>>> smn("henok", )
+	My name is henok 
