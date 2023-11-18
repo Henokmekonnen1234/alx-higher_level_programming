@@ -11,11 +11,12 @@ if __name__ == "__main__":
     import sys
 
     try:
-        conn = MySQLdb.connect(host="localhost", port=3306,\
-                               user=sys.argv[1], password=sys.argv[2],\
+        conn = MySQLdb.connect(host="localhost", port=3306,
+                               user=sys.argv[1], password=sys.argv[2],
                                db=sys.argv[3], charset="utf8")
         cur = conn.cursor()
-        cur.execute("SELECT * FROM states WHERE name = '{}'".format(sys.argv[4]))
+        cur.execute("SELECT * FROM states WHERE name = '{}'".
+                    format(sys.argv[4]))
         result = cur.fetchall()
         for values in result:
             print(values)
