@@ -20,7 +20,9 @@ if __name__ == "__main__":
         result = cur.fetchall()
         for values in result:
             print(values)
+        cur.close()
+        conn.close()
     except (MySQLdb.Error, Exception) as e:
-        print(e)
-    cur.close()
-    conn.close()
+        cur.close()
+        conn.close()
+        pass
