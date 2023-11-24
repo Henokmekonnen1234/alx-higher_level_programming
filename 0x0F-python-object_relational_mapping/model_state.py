@@ -24,6 +24,11 @@ try:
                     primary_key=True, unique=True, nullable=False)
         name = Column(String(128), nullable=False)
 
+        def __init__(self, name=None):
+            """it will set the value of name passed to this class"""
+            if name is not None:
+                self.name = name
+
     Base.metadata.create_all(engine)
 
     Session = sessionmaker(bind=engine)
