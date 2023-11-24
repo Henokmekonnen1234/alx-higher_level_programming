@@ -20,6 +20,6 @@ if __name__ == "__main__":
         if result is not None:
             print("{}: {}".format(result.id, result.name))
         else:
-            print(Nothing)
+            print("{}".format("Nothing"))
     except Exception as e:
         pass
