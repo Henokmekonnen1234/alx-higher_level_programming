@@ -20,4 +20,4 @@ if __name__ == "__main__":
         for value in result:
             print("{}: {}".format(value.id, value.name))
     except Exception as e:
-        print("{}".format(e))
+        pass
