@@ -16,7 +16,8 @@ if __name__ == "__main__":
         cur = con.cursor()
         cur.execute("SELECT cities.name FROM cities INNER JOIN states\
                      WHERE states.name = %s AND\
-                     states.id = cities.state_id ORDER BY cities.id", (sys.argv[4],))
+                     states.id = cities.state_id ORDER BY cities.id",
+                     (sys.argv[4],))
         result = cur.fetchall()
         result = list(map(lambda x: x[0], result))
         for i in range(len(result)):
