@@ -7,7 +7,7 @@ This module will CRUD data using sqlalchemy
 
 from sqlalchemy import create_engine, Column, Integer, String, Sequence
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import sessionmaker, relationship
 import sys
 
 
@@ -23,6 +23,7 @@ try:
         id = Column(Integer, Sequence("states_id_seq"),
                     primary_key=True, unique=True, nullable=False)
         name = Column(String(128), nullable=False)
+        cities = relationship("City", back_populates="states")
 
         def __init__(self, name=None):
             """it will set the value of name passed to this class"""
@@ -33,6 +34,5 @@ try:
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    session.commit()
 except Exception as e:
     print(e)
