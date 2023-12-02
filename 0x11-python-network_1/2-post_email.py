@@ -15,7 +15,7 @@ if __name__ == "__main__":
             data = {"email":  f"{sys.argv[2]}"}
             data = urllib.parse.urlencode(data).encode("utf-8")
             with urllib.request.urlopen(sys.argv[1], data) as response:
-                body_content = response.read().encode("utf-8")
+                body_content = response.read().decode("utf-8")
         print(body_content)
     except Exception as e:
         print(e)
