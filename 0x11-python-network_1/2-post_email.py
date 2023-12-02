@@ -14,9 +14,7 @@ if __name__ == "__main__":
         if sys.argv[1] is not None and sys.argv[2] is not None:
             data = {"email":  f"{sys.argv[2]}"}
             data = urllib.parse.urlencode(data).encode("utf-8")
-            request = urllib.request.Request(sys.argv[1], data,
-                                             method="POST")
-            with urllib.request.urlopen(sys.argv[1]) as response:
+            with urllib.request.urlopen(sys.argv[1], data) as response:
                 body_content = response.read().encode("utf-8")
         print(body_content)
     except Exception as e:
