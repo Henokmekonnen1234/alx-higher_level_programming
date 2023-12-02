@@ -17,7 +17,7 @@ if __name__ == "__main__":
             request = urllib.request.Request(sys.argv[1], data,
                                              method="POST")
             with urllib.request.urlopen(sys.argv[1]) as response:
-                body_content = response.encode("utf-8")
+                body_content = response.read().encode("utf-8")
         print(body_content)
     except Exception as e:
         print(e)
