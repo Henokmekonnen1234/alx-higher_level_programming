@@ -12,8 +12,8 @@ if __name__ == "__main__":
                                     ) as body_response:
             result_response = body_response.read()
         print("Body response:")
-        print("    - type: {}".format(type(result_response)))
-        print("    - content: {}".format(result_response))
-        print("    - utf8 content: {}".format(result_response))
+        print("\t- type: {}".format(type(result_response)))
+        print("\t- content: {}".format(result_response))
+        print("\t- utf8 content: {}".format(result_response.decode("utf-8")))
     except Exception as e:
         print(e)
