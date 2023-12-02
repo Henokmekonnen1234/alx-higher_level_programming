@@ -10,6 +10,6 @@ import sys
 if __name__ == "__main__":
     try:
         response = requests.get("{}".format(sys.argv[1]))
-        print(response.headers["X-Request-Id"])
+        print(response.headers.get("X-Request-Id"))
     except Exception as e:
         print(e)
